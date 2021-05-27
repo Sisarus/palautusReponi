@@ -1,0 +1,9 @@
+selain->palvelin: HTTP post https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over selain:
+Postattu tieto pushataan json listaan päivämäärän ja kellon kanssa.
+Päivitetyn listan avulla sivu lataa uudetaan json listan.
+Sivua ei tarvitse ladata uudestaan
+Selain lähettää palvelimmelle lopuksi listan jossa on päivitetty post.
+Tämä lista taitaa olla opiskelijoiden täyttämä.
+end note

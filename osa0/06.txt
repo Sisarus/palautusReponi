@@ -1,0 +1,21 @@
+note over selain:
+selain kutsuu js functiota
+parametreistä ottaa datan
+tallentaa datan +
+päivämäärän + ajan jolloin painiketta painettiin
+puskee sen glodaaliin note listaan
+lähettää päivitetyn listan palvelimelle
+end note
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+
+note over palvelin:
+lähetty tieto tallentuu tietokantaan
+end note
+
+note over selain:
+jos datan lähetys onnistui
+selain lataa uudestaan globaalin note listan,
+jossa on päivitetty uusi muistiinpano 
+end note

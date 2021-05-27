@@ -1,0 +1,44 @@
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+palvelin-->selain: text/html-koodi
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin-->selain: main.css
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+palvelin-->selain: spa.js
+
+
+note over selain:
+selain lataa js tiedostossa window.onload
+ja pyytää data.json tietoa palvelimelta
+end note
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin-->selain: data.json
+
+note over selain:
+window.onload käy data.json läpi
+selain luo näkymän datasta
+end note
+
+note over palvelinChrome:
+Sitten haetaan laajennuksia koodiin,
+joka on Chromen omaa
+end note
+
+
+selain->palvelinChrome: HTTP GET chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/data/js/extn-utils.html
+palvelinChrome-->selain: text/html-koodi
+
+selain->palvelinChrome: HTTP GET chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/data/js/extn-utils.js
+palvelinChrome-->selain: extn-utils.js
+
+note over selain:
+Viimeiseksi palvelimelta ico
+joka on pieni kuva
+end note
+
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+palvelin-->selain: text/html-koodi
